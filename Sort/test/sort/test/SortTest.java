@@ -34,6 +34,10 @@ public class SortTest extends TestCase{
 		List<Comparable> insertionSortList = new ArrayList<Comparable>(reference);
 		new InsertionSorter().sort(insertionSortList);
 		assertTrue(isSorted(insertionSortList));
+		
+		List<Comparable> selectionSortList = new ArrayList<Comparable>(reference);
+		new InsertionSorter().sort(selectionSortList);
+		assertTrue(isSorted(selectionSortList));
 	}
 	
 	private boolean isSorted(List<Comparable> list){
