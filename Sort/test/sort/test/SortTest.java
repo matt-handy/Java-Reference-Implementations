@@ -12,6 +12,8 @@ import org.junit.Test;
 import sort.bubblesort.BubbleSorter;
 import sort.insertionsort.InsertionSorter;
 import sort.mergesort.MergeSorter;
+import sort.quicksort.QuickSorter;
+import sort.selectionsort.SelectionSorter;
 
 public class SortTest extends TestCase{
 
@@ -36,8 +38,13 @@ public class SortTest extends TestCase{
 		assertTrue(isSorted(insertionSortList));
 		
 		List<Comparable> selectionSortList = new ArrayList<Comparable>(reference);
-		new InsertionSorter().sort(selectionSortList);
+		new SelectionSorter().sort(selectionSortList);
 		assertTrue(isSorted(selectionSortList));
+		
+		List<Comparable> quickSortList = new ArrayList<Comparable>(reference);
+		new QuickSorter().sort(quickSortList);
+		printList(quickSortList);
+		assertTrue(isSorted(quickSortList));
 	}
 	
 	private boolean isSorted(List<Comparable> list){
@@ -48,6 +55,14 @@ public class SortTest extends TestCase{
 		}
 		
 		return true;
+	}
+	
+	private void printList(List<Comparable> list){
+		System.out.println("List: ");
+		for (Comparable comp : list){
+			System.out.print(comp + " ");
+		}
+		System.out.println("");
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import sort.SortHelper;
 import sort.Sorter;
 
-public class SelectionSort implements Sorter {
+public class SelectionSorter implements Sorter {
 
 	public void sort(List<Comparable> list) {
 		int innerIdx, outerIdx;
