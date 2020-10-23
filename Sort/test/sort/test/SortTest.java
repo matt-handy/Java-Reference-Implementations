@@ -25,23 +25,23 @@ public class SortTest extends TestCase{
 		reference.add(75);
 		reference.add(3);
 		
-		List<Comparable> bubbleList = new ArrayList<Comparable>(reference);
+		List<Comparable> bubbleList = new ArrayList<>(reference);
 		new BubbleSorter().sort(bubbleList);
 		assertTrue(isSorted(bubbleList));
 		
-		List<Comparable> mergeSortList = new ArrayList<Comparable>(reference);
+		List<Comparable> mergeSortList = new ArrayList<>(reference);
 		new MergeSorter().sort(mergeSortList);
 		assertTrue(isSorted(mergeSortList));
 		
-		List<Comparable> insertionSortList = new ArrayList<Comparable>(reference);
+		List<Comparable> insertionSortList = new ArrayList<>(reference);
 		new InsertionSorter().sort(insertionSortList);
 		assertTrue(isSorted(insertionSortList));
 		
-		List<Comparable> selectionSortList = new ArrayList<Comparable>(reference);
+		List<Comparable> selectionSortList = new ArrayList<>(reference);
 		new SelectionSorter().sort(selectionSortList);
 		assertTrue(isSorted(selectionSortList));
 		
-		List<Comparable> quickSortList = new ArrayList<Comparable>(reference);
+		List<Comparable> quickSortList = new ArrayList<>(reference);
 		new QuickSorter().sort(quickSortList);
 		printList(quickSortList);
 		assertTrue(isSorted(quickSortList));

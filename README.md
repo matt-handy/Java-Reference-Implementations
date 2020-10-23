@@ -11,3 +11,7 @@ BubbleSort
 Insertion Sort
 
 Merge Sort
+
+Graphing
+==============================
+Dijkstra's Algorithm
